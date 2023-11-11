@@ -1,0 +1,15 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var professional_1 = require("./professional");
+var professional1 = new professional_1.Professional("Brendan Fraser", 54, 80, 1.91, false, "American", 3, "Actor");
+var professional2 = new professional_1.Professional("Nicole Kidman", 56, 60, 1.80, false, "Australian", 0, "Actress");
+var professional3 = new professional_1.Professional("Maryl Streep", 74, 58, 1.70, false, "American", 3, "Actress");
+var professional4 = new professional_1.Professional("Christopher Nolan", 53, 85, 1.80, false, "English", 0, "Film director");
+var professional5 = new professional_1.Professional("Tim Burton", 65, 90, 1.86, false, "American", 0, "Film director");
+var professional6 = new professional_1.Professional("Burce Willis", 68, 95, 1.83, true, "American", 0, "Actor");
+console.log(professional1.showToString());
+console.log(professional2.showToString());
+console.log(professional3.showToString());
+console.log(professional4.showToString());
+console.log(professional5.showToString());
+console.log(professional6.showToString());

@@ -1,6 +1,6 @@
 // Paso 1. Crear clase Professional con los siguientes atributos públicos:
 
-class Professional {
+export class Professional {
     public name: string 
     public age: number
     public weight: number
@@ -11,17 +11,28 @@ class Professional {
     public profession: string
 
     constructor(name, age, weight, height, isRetired, nationality, oscarsNumber, profession){
-        name = this.name;
-        age = this.age;
-        weight = this.weight;
-        height = this.height;
-        isRetired = this.isRetired;
-        nationality = this.nationality;
-        oscarsNumber = this.oscarsNumber;
-        profession = this.profession;
+        this.name = name;
+        this.age = age;
+        this.weight = weight;
+        this.height = height;
+        this.isRetired = isRetired;
+        this.nationality = nationality;
+        this.oscarsNumber = oscarsNumber;
+        this.profession = profession;
     }
 
-    public showAtributes(){
-        console.log()
+    public showToString(){
+        return (
+            `Name - ${this.name}\n 
+            Age - ${this.age}\n 
+            Weight - ${this.weight}\n 
+            Height - ${this.height}\n 
+            Is retired - ${this.isRetired}\n 
+            Nationality - ${this.nationality}\n 
+            Oscars Number - ${this.oscarsNumber}\n 
+            Profession - ${this.profession} `
+        )
     }
 }
+
+
