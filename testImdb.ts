@@ -1,3 +1,6 @@
+import * as user from "readline-sync";
+import * as fs from "file-system";
+
 import { Imdb } from "./Imdb"
 import { Movie } from "./movie"
 import { Professional } from "./professional";
@@ -38,6 +41,7 @@ console.log(cine);
 // 1. Convertir a un string el objeto Imdb
 
 let dataBaseString = JSON.stringify(cine);
-let fileName = "imdbBBDD.json";
+let fileName = "./cine.json";
 
 fs.writeFileSync(fileName, dataBaseString,{encoding:"utf8", mode:0o666, flag:"w+"})
+

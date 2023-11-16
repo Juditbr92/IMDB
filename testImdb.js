@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+var fs = require("file-system");
 var Imdb_1 = require("./Imdb");
 var movie_1 = require("./movie");
 var professional_1 = require("./professional");
@@ -29,5 +30,10 @@ movie2.addPlatform("Amazon Prime");
 movie2.addIsMCU(false);
 movie2.addProducer("20th Century Studios");
 movie2.addDistributor("20th Century Studios");
-var dataBase1 = new Imdb_1.Imdb([movie1, movie2]);
-console.log(dataBase1);
+var cine = new Imdb_1.Imdb([movie1, movie2]);
+console.log(cine);
+// Paso 6: lectura/escritura en fichero. 
+// 1. Convertir a un string el objeto Imdb
+var dataBaseString = JSON.stringify(cine);
+var fileName = "./cine.json";
+fs.writeFileSync(fileName, dataBaseString, { encoding: "utf8", mode: 438, flag: "w+" });
