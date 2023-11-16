@@ -31,5 +31,13 @@ movie2.addIsMCU(false);
 movie2.addProducer("20th Century Studios");
 movie2.addDistributor("20th Century Studios");
 
-let dataBase1 = new Imdb([movie1, movie2]);
-console.log(dataBase1);
+let cine = new Imdb([movie1, movie2]);
+console.log(cine);
+
+// Paso 6: lectura/escritura en fichero. 
+// 1. Convertir a un string el objeto Imdb
+
+let dataBaseString = JSON.stringify(cine);
+let fileName = "imdbBBDD.json";
+
+fs.writeFileSync(fileName, dataBaseString,{encoding:"utf8", mode:0o666, flag:"w+"})
